@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 2</h2>
+       Mời bạn nhập một chuỗi vào đây:
+       <input type="text" id="txt1" />
+       <input type="button" onclick="clickMe()" value="Show me">
+       <br> <br>
+       <textarea id="text2"></textarea>
+       <!-- Hãy tạo một textbox thứ 2, khi click vào nút Show me thì không hiện hộp thoại thông báo
+            mà hãy điền giá trị (tức là chuỗi đã nhập) của textbox thứ 1 vào textbox thứ 2 này
+       -->
+
+<script type="text/javascript">
+       function clickMe() {
+              var str = document.getElementById('txt1').value;
+              var a = document.getElementById('text2').innerHTML = str;
+       }
+
+</script>
+
+       <!-- Kết luận: ta đã học được cách lấy giá trị của 1 textbox và cách gọi 1 sự kiện trong JS -->
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 3a</h2>
+       Mời bạn nhập một số vào đây:
+       <input type="text" id="txt1" />
+       <input type="button" onclick="clickMe()" value="Show number in English">
+       <div id="resultDiv"></div>
+
+<script type="text/javascript">
+       function clickMe() {
+              var str = document.getElementById('txt1').value;
+              if (str == '1') {
+                document.getElementById('resultDiv').innerHTML = 'One';
+              }
+              if (str == '2'){
+                     document.getElementById('resultDiv').innerHTML = 'Two'
+              }
+              if (str == '3'){
+                     document.getElementById('resultDiv').innerHTML = 'Three'
+              }
+              // Yêu cầu: Làm tương tự cho các số 2 và 3. (Chỉ cần xử lý cho việc nhập các số từ 1 đến 3 thôi nha)
+       }
+</script>
+
+       <!-- Kết luận: ta đã học được lệnh if và cách sử dụng thẻ div thay cho alert -->
+</body>
+</html>

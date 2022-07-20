@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 8</h2>
+       <h3>Tính tiền hóa đơn trà sửa </h3>
+       <br>
+
+       Mời bạn nhập đơn giá của 1 ly trà sữa:
+       <input type="text" id="dgTxt" /> VNĐ <br> <br>
+       Mời bạn nhập số lượng ly trà sữa:
+       <input type="text" id="slTxt" /> <br> <br>
+
+       <input type="checkbox" id="giamGiaChk" name="giamGia">
+       <label for="giamGia"> Giảm giá 10% </label><br><br>
+       
+       Tổng tiền (chưa giảm giá): <span id="resultDiv"></span> <br> <br>
+       Tổng tiền (giảm giá): <span id="resultDiv2"></span> <br> <br>
+       <input type="button" onclick="tinhTien()" value="Tính tiền"> <br> <br>
+
+<script type="text/javascript">
+       function tinhTien() {
+              var sl = document.getElementById('dgTxt').value;
+              var dg = document.getElementById('slTxt').value;
+              var tt = parseFloat(sl) * parseFloat(dg);
+
+              document.getElementById('resultDiv').innerHTML = tt;
+              
+               if (document.getElementById('giamGiaChk').checked){
+                     var ttgg = tt - (tt*0.1);
+              document.getElementById('resultDiv2').innerHTML = ttgg;
+               }
+               else {
+                  document.getElementById('resultDiv2').innerHTML = 'khong co giam gia';   
+               }
+ 
+              // Yêu cầu: 
+              //   1. Hiện tại, chương trình đang tính tổng tiền (khi chưa chọn checkbox giảm giá) bị sai, 
+              //      hãy sửa lại cho đúng.
+              //   2. Học viên hãy hoàn thiện phần tính tổng tiền sau khi giảm giá 10% (khi chọn checkbox).
+              //      Hãy thêm 1 dòng hiển thị tổng tiền đã giảm giá ở ngay bên dưới dòng "Tổng tiền (chưa giảm giá): "
+              //      Nội dung phần hiển thị cần thêm là "Tổng tiền (đã giảm giá): "....
+       }
+</script>
+</body>
+</html>

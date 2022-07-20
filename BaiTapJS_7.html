@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 7</h2>
+       Kiểm tra chuỗi con trong 1 chuỗi cha <br>
+       Mời bạn nhập cha:
+       <input type="text" id="aTxt" /> <br>
+       Mời bạn nhập con:
+       <input type="text" id="bTxt" /> <br>
+
+       <input type="button" onclick="timChuoi()" value="Kiểm tra"><br>
+       Kết quả kiểm tra: <span id="resultDiv"></span>
+
+<script type="text/javascript">
+       function timChuoi() {
+              var a = document.getElementById('aTxt').value;
+              var b = document.getElementById('bTxt').value;
+
+              if (a.indexOf(b) >= 0) {
+                document.getElementById('resultDiv').innerHTML = 'Chuỗi (' + b + ') có xuất hiện trong chuỗi (' + a + ')';
+              } else {
+                document.getElementById('resultDiv').innerHTML = 'Chuỗi (' + b + ') KHÔNG xuất hiện trong chuỗi (' + a + ')';
+              }
+              
+
+              // Yêu cầu: 
+              //   Hiện tại, chương trình chỉ tìm được các chuỗi con nằm ở giữa hoặc ở cuối của chuỗi cha
+              //   Học viên hãy tìm cách sửa lại chương trình để không bị lỗi trên nữa
+       }
+</script>
+</body>
+</html>

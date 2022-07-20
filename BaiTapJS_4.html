@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 4</h2>
+       Giải phương trình bậc nhất ax + b = 0 <br>
+       Mời bạn nhập a:
+       <input type="text" id="aTxt" /> <br>
+       Mời bạn nhập b:
+       <input type="text" id="bTxt" /> <br>
+
+       <input type="button" onclick="timX()" value="Tìm nghiệm x"><br>
+       Kết quả x = <span id="resultDiv"></span>
+
+<script type="text/javascript">
+       function timX() {
+              var a = document.getElementById('aTxt').value;
+              var b = document.getElementById('bTxt').value;
+
+              if (a != 0) {
+                document.getElementById('resultDiv').innerHTML = (-b/a);
+              }
+              if (a == 0 && b == 0 ) {
+                document.getElementById('resultDiv').innerHTML = 'pt vo so nghiem';
+              }
+              if (a == 0 && b != 0 ) {
+                document.getElementById('resultDiv').innerHTML = 'vo nghiem';
+              }
+              // Yêu cầu: 
+              //   1. Hiện tại, kết quả của trường hợp a khác 0 đang bị sai, hãy tìm cách sửa lại cho đúng
+              //   2. Xử lý tiếp cho trường hợp a bằng 0
+       }
+</script>
+</body>
+</html>

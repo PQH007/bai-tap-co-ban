@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 10</h2>
+
+       Nhập số lần xuất hiện thông báo bạn thích:
+       <input type="text" id="numberTxt" /> <br> <br>
+ 
+       Click vào đây để thấy điều bất ngờ:
+       <input type="button" onclick="showMessage()" value="Click me!">
+
+<script type="text/javascript">
+       function showMessage() {
+              var n = document.getElementById('numberTxt').value;
+              if (n <= 5)
+              {     if(n%2 == 0){
+                     for (var i = 0; i <= n; i++) {
+                     alert('DO YOU LOVE ME - LẦN ' + --n);
+              }      
+              }else{
+                     for (var i = 1; i <= 2*n; i++)
+                     alert("DO YOU HATE ME? - Lần " + i)
+              }
+              }
+              else{
+                     alert("Số lần không hợp lệ!");
+              }
+              
+
+              // Yêu cầu:
+              //          1. Nếu người dùng nhập số lớn hơn 5 thì hiển thị thông báo lỗi: "Số lần không hợp lệ!"
+              //          2. Nếu số lần xuất hiện là số chẵn thì:
+              //                 hiện thêm thông báo: "DO YOU LOVE ME? - Lần xxx"; xxx sẽ chạy giảm dần từ n về 1
+              //          3. Nếu số lần xuất hiện là số lẻ thì:
+              //                 hiện thêm thông báo: "DO YOU HATE ME? - Lần xxx"; xxx sẽ chạy tăng dần từ 1 đến 2n
+          
+       }
+</script>
+</body>
+</html>

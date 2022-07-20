@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 3b</h2>
+       Mời bạn nhập một số vào đây:
+       <input type="text" id="txt1" />
+       <input type="button" onclick="clickMe()" value="Show number in English">
+       <div id="resultDiv"></div>
+
+<script type="text/javascript">
+       function clickMe() {
+              var str = document.getElementById('txt1').value;
+              if (str == '1') {
+                document.getElementById('resultDiv').innerHTML = 'One';
+              }
+              if (str == '2'){
+                     document.getElementById('resultDiv').innerHTML = 'Two'
+              }
+              if (str == '3'){
+                     document.getElementById('resultDiv').innerHTML = 'Three'
+              }
+              else{
+                     document.getElementById('resultDiv').innerHTML = 'Invalid number'    
+              }
+              // Yêu cầu: Làm tương tự cho các số 2 và 3 nhưng sử dụng else (không dùng toàn bộ bằng if như bài trước)
+              // Nếu không phải là số 1, 2 và 3 thì hiển thị là "Invalid number"
+       }
+</script>
+
+       <!-- Kết luận: ta đã học được lệnh if có else đi cùng -->
+</body>
+</html>

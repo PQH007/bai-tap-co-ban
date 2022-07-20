@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 5</h2>
+       Giải phương trình bậc hai  ax(2) + bx + c = 0 <br>
+       Mời bạn nhập a:
+       <input type="text" id="aTxt" /> <br>
+       Mời bạn nhập b:
+       <input type="text" id="bTxt" /> <br>
+       Mời bạn nhập c:
+       <input type="text" id="cTxt" /> <br>
+
+
+       <input type="button" onclick="timX()" value="Tìm nghiệm x"><br>
+       Kết quả x1 = <span id="resultDiv"></span>
+       Kết quả x2 = <span id="resultDiv2"></span>
+
+<script type="text/javascript">
+       function timX() {
+              var a = document.getElementById('aTxt').value;
+              var b = document.getElementById('bTxt').value;
+              var c = document.getElementById('cTxt').value;              
+              var delta = (b*b)-(4*a*c);
+              if (delta < 0 ){
+                     document.getElementById('resultDiv').innerHTML = 'pt vo nghiem' 
+              }
+              if (delta == 0 ){
+                     document.getElementById('resultDiv').innerHTML = (-b/(2*a))
+              }
+              else{
+                     document.getElementById('resultDiv').innerHTML =((-b+ Math.sqrt(delta))/(2*a))
+                     document.getElementById('resultDiv2').innerHTML =((-b- Math.sqrt(delta))/(2*a))
+              }
+              console.log(delta)
+              // Yêu cầu: 
+              //   Giải bài tìm nghiệm x cho phương trình bậc 2
+
+       }
+</script>
+</body>
+</html>

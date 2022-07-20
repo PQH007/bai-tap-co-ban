@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 14</h2>
+       <h3>Tính tuổi của các nhân viên trong công ty (giả sử năm hiện tại là năm 3000) </h3>
+       <br>
+
+       Nhập năm sinh (>= 3000) của nhân viên thử việc:
+       <input type="text" id="namSinhNVThuViecTxt" /> <br> <br>
+ 
+       Tuổi của nhân viên thử việc là: <span id="resultNVThuViecDiv">0</span> <br> <br>
+
+       Nhập năm sinh (>= 3000) của nhân viên chính thức:
+       <input type="text" id="namSinhNVChinhThucTxt" /> <br> <br>
+ 
+       Tuổi của nhân viên chính thức là: <span id="resultNVChinhThucDiv">0</span> <br> <br>      
+
+       <input type="button" onclick="tinhTuoi()" value="Tính tuổi">
+
+<script type="text/javascript">
+       var namSinhNVThuViec = "";
+       var tuoiNVThuViec = 0;
+
+       var namSinhNVChinhThuc = "";
+       var tuoiNVChinhThuc = 0;     
+
+       function tinhTuoi() {
+             namSinhNVThuViec = layDuLieu("namSinhNVThuViecTxt");
+             tuoiNVThuViec = tinhToan(namSinhNVThuViec - 3000);
+             xuatDuLieu("resultNVThuViecDiv", tuoiNVThuViec);
+
+             namSinhNVChinhThuc = layDuLieu("namSinhNVChinhThucTxt");
+             tuoiNVChinhThuc = tinhToan(namSinhNVChinhThuc - 3000);
+             xuatDuLieu("resultNVChinhThucDiv", tuoiNVChinhThuc);
+       }
+
+       function layDuLieu(namSinhTxtBox) {
+              return document.getElementById(namSinhTxtBox).value;
+       }
+
+       function tinhToan(namSinhNV) {
+              return parseInt(namSinhNV);
+       }
+
+       function xuatDuLieu(resultDiv, tuoi) {
+              document.getElementById(resultDiv).innerHTML = tuoi;
+       }
+
+       // Yêu cầu: 
+       //     Chương trình hiện tại có 1 lỗi, hãy tìm và sửa lỗi đó
+   
+       //     Hãy tìm điểm khác nhau trong việc gọi các function giữa bài tập 13 và 14
+
+       //     Hãy phân tích tầm quan trọng của việc tester có thể đoán được việc
+       //        "Chương trình có những đoạn code (hoặc những function) được developer sử dụng chung"
+       //        trong quá trình thực hiện kiểm thử
+
+</script>
+</body>
+</html>

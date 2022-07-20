@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 9</h2>
+       <h3>Tính tiền hóa đơn trà sửa </h3>
+       <br>
+
+       Mời bạn nhập đơn giá của 1 ly trà sữa:
+       <input type="text" id="dgTxt" /> VNĐ <br> <br>
+       Mời bạn nhập số lượng ly trà sữa:
+       <input type="text" id="slTxt" /> <br> <br>
+
+       Chọn mức giảm giá:
+       <select id="giamGiaCbb" name="giamGiaCbb">
+              <option value="giamGia0PhanTram">Không giảm giá</option>
+              <option value="giamGia5PhanTram">Giám giá 5%</option>
+              <option value="giamGia10PhanTram">Giám giá 10%</option>
+              <option value="giamGia15PhanTram">Giám giá 15%</option>
+              <option value="giamGia20PhanTram">Giám giá 20%</option>
+       </select>
+       
+       <br><br>
+
+       Tổng tiền (chưa giảm giá): <span id="resultDiv"></span> <br> <br>
+       <input type="button" onclick="tinhTien()" value="Tính tiền">
+
+<script type="text/javascript">
+       function tinhTien() {
+              var sl = document.getElementById('dgTxt').value;
+              var dg = document.getElementById('slTxt').value;
+              var tt = parseFloat(sl) * parseFloat(dg);
+
+              document.getElementById('resultDiv').innerHTML = tt;
+
+              if(document.getElementById('giamGiaCbb').value ="giamGia5PhanTram" ){
+                     var ttgg = tt -(tt * 0.05)
+                     document.getElementById('resultDiv').innerHTML = ttgg;
+              }
+
+              // Yêu cầu: 
+              //   1. Hiện tại, chương trình đang tính tổng tiền (khi chưa chọn checkbox giảm giá) bị sai, 
+              //      hãy sửa lại cho đúng.
+              //   2. Học viên hãy hoàn thiện phần tính tổng tiền sau khi giảm giá 10% (khi chọn checkbox).
+              //      Hãy thêm 1 dòng hiển thị tổng tiền đã giảm giá ở ngay bên dưới dòng "Tổng tiền (chưa giảm giá): "
+              //      Nội dung phần hiển thị cần thêm là "Tổng tiền (đã giảm giá): "....
+
+              // Kết luận:
+              //      Đến hết bài tập này, bạn đã biết sử dụng thành thạo if else và cách lấy giá trị của textbox, radio button, checkbox, combobox
+       }
+</script>
+</body>
+</html>

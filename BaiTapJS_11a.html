@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 11a</h2>
+
+       Bạn hãy đoán xem người yêu của bạn sinh năm mấy nha:<br> <br>
+ 
+       Click vào đây để bất đầu dự đoán nè:
+       <input type="button" onclick="doanTuoiNguoiYeu()" value="Bắt đầu!">
+
+<script type="text/javascript">
+       function doanTuoiNguoiYeu() {
+              var daTimThay = false;
+              var i = 0;
+              while ( i >= 0) {
+                     var namSinhDuDoan = prompt("Bạn đoán xem người ấy sinh năm nào?");
+                     if (namSinhDuDoan == "1995") {
+                            daTimThay = true;
+                            break;
+                     }
+              }
+
+              if (daTimThay == true) {
+                     alert('Chúc mừng bạn đã tìm ra đáp án!!!!!!!!!');
+              } else {
+                     alert('Bạn không tìm được đáp án rồi nha');
+              }
+
+              // Yêu cầu:
+              //          Hiện tại chương trình chỉ cho phép đoán sai 5 lần, sau đó không cho đoán tiếp
+              //          Hãy sửa lại để có thể cho phép đoán đến lúc nào trúng thì mới dừng chương trình
+              //          Gợi ý: sử dụng vòng lặp while thay cho vào lặp for
+          
+       }
+</script>
+</body>
+</html>

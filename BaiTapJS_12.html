@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Exercise Javascript 12</h2>
+       <h3>Tính tuổi của nhân viên thứ <span id="sttSpan1">1</span> trong công ty (giả sử năm hiện tại là năm 3000) </h3>
+       <br>
+
+       Nhập năm sinh (>= 3000) của nhân viên thứ <span id="sttSpan2">1</span>:
+       <input type="text" id="tuoiTxt" /> <br> <br>
+ 
+       Tuổi của nhân viên thứ <span id="sttSpan3">1</span> là: <span id="resultDiv">0</span> <br> <br>
+       <input type="button" onclick="tinhTuoi()" value="Tính tuổi">
+
+<script type="text/javascript">
+       var namSinh = "";
+       var tuoi = 0;
+       var stt = 1;
+
+       function tinhTuoi() {
+              stt++
+             layDuLieu();
+             tinhToan();
+             xuatDuLieu();
+             sttt(stt);
+       }
+
+       function layDuLieu() {
+              namSinh = document.getElementById('tuoiTxt').value;
+       }
+
+       function tinhToan() {
+              tuoi = parseInt(namSinh) - 3000;
+       }
+
+       function xuatDuLieu() {
+              document.getElementById('resultDiv').innerHTML = tuoi;
+       }
+       function sttt(sttinra){
+              document.getElementsByTagName('span')[0].innerHTML = sttinra ;
+              document.getElementsByTagName('span')[1].innerHTML = sttinra ;
+              document.getElementsByTagName('span')[2].innerHTML = sttinra ;
+       }
+
+       // Yêu cầu: 
+       //     Sau khi nhập nhân viên thứ 1 xong thì cho phép nhập năm sinh và tính tuổi của nhân viên thứ 2, 3, 4, 5, ....
+       //     (Nhớ thay đổi số thứ tự của nhân viên ở các dòng thông tin trên màn hình cho đúng)
+
+</script>
+</body>
+</html>
